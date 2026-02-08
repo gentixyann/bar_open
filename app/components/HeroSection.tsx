@@ -23,10 +23,7 @@ export default function HeroSection() {
           Bar オープン
         </h2>
         <p className="text-2xl text-gray-200 mb-4 drop-shadow-lg">
-          おしゃれ × カジュアル
-        </p>
-        <p className="text-lg text-gray-300 drop-shadow-lg">
-          札幌すすきので、初心者から常連まで楽しめるバー
+          解放 × 開放
         </p>
       </div>
     </section>

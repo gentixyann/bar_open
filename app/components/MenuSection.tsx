@@ -6,14 +6,15 @@ export default function MenuSection() {
           Menu
         </h3>
         <div className="max-w-2xl mx-auto">
-          <div className="bg-gray-900/50 p-10 rounded-lg hover:shadow-[0_5px_15px_#ffffff20] transition-all duration-300">
+          <div className="bg-gray-900/50 p-5 rounded-lg hover:shadow-[0_5px_15px_#ffffff20] transition-all duration-300">
             <div className="space-y-8 text-center">
               {/* 注釈 */}
               <div className="text-center pb-8 border-b border-gray-700">
                 <div className="text-base text-gray-200 leading-relaxed">
                   <p className="mb-3">
-                    みんなが飲む王道は大体あります。ただし、
+                    みんなが飲む王道は大体あります。
                   </p>
+                  <p>ただし</p>
                   <p>
                     食事、お酒、ノンアル、アルアル、おつまみ、人々、得意不得意、これら含めオープンではメニューも日々変化しています。その日だからこその出会いと発見をお楽しみください。
                   </p>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
 
@@ -25,7 +26,16 @@ export default function Header() {
       >
         <nav className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <h1 className="text-2xl font-bold text-white">Bar オープン</h1>
+            <div className="flex items-center">
+              <Image
+                src="/images/open_logo.png"
+                alt="Bar オープン"
+                width={50}
+                height={50}
+                priority
+                className="h-auto"
+              />
+            </div>
 
             {/* デスクトップメニュー */}
             <DesktopMenu />

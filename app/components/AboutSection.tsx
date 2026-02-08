@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function AboutSection() {
   return (
     <section id="about" className="py-24 bg-gray-900/30">
@@ -6,6 +8,16 @@ export default function AboutSection() {
           About
         </h3>
         <div className="max-w-3xl mx-auto text-center">
+          {/* About画像 */}
+          <div className="mb-8">
+            <Image
+              src="/images/about.png"
+              alt="Bar オープン About"
+              width={600}
+              height={848}
+              className="rounded-lg mx-auto"
+            />
+          </div>
           <p className="text-lg leading-relaxed mb-6">
             Bar
             オープンは、おしゃれな空間を楽しみつつ、カジュアルな雰囲気で気軽に立ち寄れるバーです。
