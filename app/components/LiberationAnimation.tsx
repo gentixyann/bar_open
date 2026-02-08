@@ -23,7 +23,7 @@ export default function LiberationAnimation() {
     if (!containerRef.current) return;
 
     const particles: Particle[] = [];
-    const maxParticles = 200;
+    const maxParticles = 100; // パーティクル数を削減
     let time = 0;
 
     const sketch = (p: p5) => {
@@ -58,7 +58,7 @@ export default function LiberationAnimation() {
             life: 0,
             maxLife: p.random(100, 300),
             size: p.random(2, 8),
-            hue: p.random(260, 320), // 紫系の色
+            hue: p.random(0, 30), // オレンジ・コーラル系の色
             alpha: 0.8,
           });
         }
@@ -80,7 +80,7 @@ export default function LiberationAnimation() {
               life: 0,
               maxLife: p.random(80, 200),
               size: p.random(3, 12),
-              hue: p.random(280, 320),
+              hue: p.random(5, 25),
               alpha: 1,
             });
           }
@@ -126,23 +126,30 @@ export default function LiberationAnimation() {
           }
         }
 
-        // 接続線を描画（近いパーティクル同士）
-        p.stroke(280, 50, 80, 0.15);
-        p.strokeWeight(0.5);
-        for (let i = 0; i < particles.length; i++) {
-          for (let j = i + 1; j < particles.length; j++) {
-            const dx = particles[i].x - particles[j].x;
-            const dy = particles[i].y - particles[j].y;
-            const dist = Math.sqrt(dx * dx + dy * dy);
+        // 接続線を描画（パフォーマンス最適化版：一部のパーティクルのみ）
+        if (particles.length > 10 && p.frameCount % 2 === 0) {
+          // 2フレームに1回のみ描画
+          p.stroke(15, 70, 90, 0.15);
+          p.strokeWeight(0.5);
 
-            if (dist < 100) {
-              const alpha = (1 - dist / 100) * 0.3;
-              p.stroke(280, 50, 80, alpha * particles[i].alpha * particles[j].alpha);
-              p.line(particles[i].x, particles[i].y, particles[j].x, particles[j].y);
+          // 最大30個のパーティクルのみチェック
+          const maxCheck = Math.min(particles.length, 30);
+          for (let i = 0; i < maxCheck; i++) {
+            for (let j = i + 1; j < maxCheck && j < i + 5; j++) {
+              // 近くの5個のみチェック
+              const dx = particles[i].x - particles[j].x;
+              const dy = particles[i].y - particles[j].y;
+              const dist = Math.sqrt(dx * dx + dy * dy);
+
+              if (dist < 80) {
+                const alpha = (1 - dist / 80) * 0.2;
+                p.stroke(15, 70, 90, alpha * particles[i].alpha * particles[j].alpha);
+                p.line(particles[i].x, particles[i].y, particles[j].x, particles[j].y);
+              }
             }
           }
+          p.noStroke();
         }
-        p.noStroke();
       };
 
       p.windowResized = () => {

@@ -3,7 +3,7 @@
 :root {
   --background: #000000;
   --foreground: #d3d3d3;
-  --accent: #8224e3;
+  --accent: #d3ccb1;
 }
 
 @theme inline {
@@ -11,6 +11,35 @@
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
   --font-sans: var(--font-zen-old-mincho);
+}
+
+/* Tailwindでaccentカラーを使えるようにする */
+.text-accent {
+  color: var(--accent);
+}
+
+.bg-accent {
+  background-color: var(--accent);
+}
+
+.border-accent {
+  border-color: var(--accent);
+}
+
+.hover\:text-accent:hover {
+  color: var(--accent);
+}
+
+.hover\:bg-accent:hover {
+  background-color: var(--accent);
+}
+
+.bg-accent\/10 {
+  background-color: rgb(from var(--accent) r g b / 0.1);
+}
+
+.bg-accent\/20 {
+  background-color: rgb(from var(--accent) r g b / 0.2);
 }
 
 body {

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function ContactSection() {
   return (
     <section id="contact" className="py-24">
@@ -17,9 +19,15 @@ export default function ContactSection() {
                   href="https://www.instagram.com/baropen_sapporo/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block text-lg font-bold text-[#8224e3] hover:text-white transition-colors px-6 py-3 border-2 border-[#8224e3] rounded-lg hover:bg-[#8224e3]/20"
+                  className="inline-flex items-center gap-3 text-lg font-bold text-accent hover:text-white transition-colors px-6 py-3 border-2 border-accent rounded-lg hover:bg-accent/20"
                 >
-                  @baropen_sapporo
+                  <Image
+                    src="/images/logos/Instagram/Instagram_Glyph_Gradient.svg"
+                    alt="Instagram"
+                    width={24}
+                    height={24}
+                  />
+                  <span>@baropen_sapporo</span>
                 </a>
               </div>
               <div className="text-center pt-6 border-t border-gray-700">
