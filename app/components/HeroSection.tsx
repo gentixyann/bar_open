@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 
@@ -14,7 +14,7 @@ export default function HeroSection() {
   const logoRef = useRef<HTMLDivElement>(null);
   const rotationRef = useRef(0);
   const speedRef = useRef(0.5); // 初期速度（度/フレーム）
-  const animationFrameRef = useRef<number>();
+  const animationFrameRef = useRef<number | undefined>(undefined);
 
   useEffect(() => {
     // アニメーションループ
