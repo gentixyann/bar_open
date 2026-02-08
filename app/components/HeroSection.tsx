@@ -2,17 +2,17 @@
 
 import dynamic from "next/dynamic";
 
-// p5.jsコンポーネントを動的インポート（SSR無効）
-const LiberationAnimation = dynamic(
-  () => import("./LiberationAnimation"),
+// p5.jsシェーダーアニメーションを動的インポート（SSR無効）
+const ShaderAnimation = dynamic(
+  () => import("./ShaderAnimation"),
   { ssr: false }
 );
 
 export default function HeroSection() {
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* p5.js アニメーション背景 */}
-      <LiberationAnimation />
+      {/* p5.js シェーダーアニメーション背景 */}
+      <ShaderAnimation />
 
       {/* グラデーションオーバーレイ */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/70 z-[1]" />
