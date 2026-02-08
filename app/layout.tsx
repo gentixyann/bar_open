@@ -9,8 +9,8 @@ const zenOldMincho = Zen_Old_Mincho({
 });
 
 export const metadata: Metadata = {
-  title: "BAR OPEN - 大人の隠れ家バー",
-  description: "落ち着いた雰囲気の中で、こだわりのお酒とお料理をお楽しみください",
+  title: "Bar オープン - 札幌すすきの | おしゃれ×カジュアルなバー",
+  description: "札幌すすきののBar オープン。おしゃれな空間とカジュアルな雰囲気で、初心者から常連まで楽しめるバーです。",
 };
 
 export default function RootLayout({
