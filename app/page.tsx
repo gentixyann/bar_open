@@ -39,7 +39,7 @@ const photoGroup3 = shuffledPhotos.slice(6, 9);
 
 export default function Home() {
   return (
-    <div className="bg-black text-gray-300">
+    <div className="bg-background text-foreground">
       <Header />
       <HeroSection />
       <AboutSection />

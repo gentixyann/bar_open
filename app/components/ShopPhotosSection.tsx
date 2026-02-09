@@ -44,7 +44,7 @@ export default function ShopPhotosSection({ photos }: ShopPhotosSectionProps) {
   }, []);
 
   return (
-    <section className="py-12 px-6 bg-black">
+    <section className="py-12 px-6 bg-[var(--bg-section)]/20">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {photos.map((photo, index) => (

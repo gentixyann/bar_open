@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-24 bg-gray-900/30">
+    <section id="about" className="py-24 bg-[var(--bg-section)]/40">
       <div className="container mx-auto px-6">
         <h3 className="text-4xl font-bold text-white text-center mb-12">
           About

@@ -2,13 +2,13 @@ import Image from "next/image";
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="py-24">
+    <section id="contact" className="py-24 bg-[var(--bg-section)]/25">
       <div className="container mx-auto px-6">
         <h3 className="text-4xl font-bold text-white text-center mb-12">
           Contact
         </h3>
         <div className="max-w-2xl mx-auto">
-          <div className="bg-gray-900/50 p-8 rounded-lg hover:shadow-[0_5px_15px_#ffffff20] transition-all duration-300">
+          <div className="bg-[var(--bg-section)]/60 p-8 rounded-lg shadow-[0_5px_15px_rgba(10,113,78,0.3)] transition-all duration-300">
             <p className="text-center mb-6">
               ご予約・お問い合わせは以下よりお願いいたします
             </p>
@@ -30,7 +30,7 @@ export default function ContactSection() {
                   <span>@baropen_sapporo</span>
                 </a>
               </div>
-              <div className="text-center pt-6 border-t border-gray-700">
+              <div className="text-center pt-6 border-t border-accent/20">
                 <p className="text-sm text-gray-400 mb-2">
                   お気軽にDMでお問い合わせください
                 </p>

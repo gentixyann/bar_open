@@ -52,7 +52,7 @@ export default function HeroSection() {
       <ShaderAnimation />
 
       {/* グラデーションオーバーレイ */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/70 z-[1]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/20 to-background/80 z-[1]" />
 
       {/* コンテンツ */}
       <div className="relative z-10 text-center">

@@ -29,7 +29,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
 
       {/* メニュー */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-black border-l border-gray-800 z-50 transform transition-transform duration-300 ease-in-out md:hidden ${
+        className={`fixed top-0 right-0 h-full w-64 bg-background border-l border-accent/30 z-50 transform transition-transform duration-300 ease-in-out md:hidden ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -72,7 +72,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           </nav>
 
           {/* フッター */}
-          <div className="p-6 border-t border-gray-800">
+          <div className="p-6 border-t border-accent/30">
             <p className="text-sm text-gray-500 text-center">
               Bar オープン
             </p>

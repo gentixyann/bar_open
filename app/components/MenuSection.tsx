@@ -1,15 +1,15 @@
 export default function MenuSection() {
   return (
-    <section id="menu" className="py-24">
+    <section id="menu" className="py-24 bg-[var(--bg-section)]/30">
       <div className="container mx-auto px-6">
         <h3 className="text-4xl font-bold text-white text-center mb-12">
           Menu
         </h3>
         <div className="max-w-2xl mx-auto">
-          <div className="bg-gray-900/50 p-5 rounded-lg hover:shadow-[0_5px_15px_#ffffff20] transition-all duration-300">
+          <div className="bg-[var(--bg-section)]/60 p-5 rounded-lg shadow-[0_5px_15px_rgba(10,113,78,0.3)] transition-all duration-300">
             <div className="space-y-8 text-center">
               {/* 注釈 */}
-              <div className="text-center pb-8 border-b border-gray-700">
+              <div className="text-center pb-8 border-b border-accent/20">
                 <div className="text-base text-gray-200 leading-relaxed">
                   <p className="mb-3">
                     みんなが飲む王道は大体あります。
@@ -22,7 +22,7 @@ export default function MenuSection() {
               </div>
 
               {/* チャージ */}
-              <div className="pb-8 border-b border-gray-700">
+              <div className="pb-8 border-b border-accent/20">
                 <h4 className="text-2xl font-bold text-white mb-4">チャージ</h4>
                 <p className="text-3xl text-accent font-bold">¥500</p>
               </div>

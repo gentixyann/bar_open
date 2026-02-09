@@ -94,9 +94,9 @@ void main( )
     float s = arrow(uv);
      s *= 1. + 0.01 * s;
 
-    vec3 col = 0.25 * s + s * pal(thc(2., s + 2. * r + a- u_time)  - 0.5 * u_time, vec3(1.), vec3(1.), vec3(1.), cos(s + u_time) * vec3(0.,1.,2.)/3.);
+    vec3 col = 0.25 * s + s * pal(thc(2., s + 2. * r + a- u_time)  - 0.5 * u_time, vec3(0.3, 0.6, 0.4), vec3(0.4, 0.5, 0.4), vec3(1.), cos(s + u_time) * vec3(0., 0.33, 0.15));
     col *= smoothstep(0.,0.1,2.25-length(uv));
-    col = mix(col, vec3(1, .93, .92)*2., smoothstep(0., 3.5, -r));
+    col = mix(col, vec3(0.6, 1.0, 0.8)*1.5, smoothstep(0., 3.5, -r));
     gl_FragColor = vec4(col,1.0);
 }
 `;
