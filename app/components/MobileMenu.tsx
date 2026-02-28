@@ -22,14 +22,14 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       {/* オーバーレイ */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black/80 z-40 md:hidden"
+          className="fixed inset-0 bg-black/40 z-40 md:hidden"
           onClick={onClose}
         />
       )}
 
       {/* メニュー */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-background border-l border-accent/30 z-50 transform transition-transform duration-300 ease-in-out md:hidden ${
+        className={`fixed top-0 right-0 h-full w-64 bg-white border-l border-accent/30 z-50 transform transition-transform duration-300 ease-in-out md:hidden ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -38,7 +38,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           <div className="flex justify-end p-6">
             <button
               onClick={onClose}
-              className="text-gray-400 hover:text-white transition-colors"
+              className="text-foreground hover:text-accent transition-colors"
               aria-label="メニューを閉じる"
             >
               <svg
@@ -62,7 +62,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                 <li key={item}>
                   <button
                     onClick={() => handleMenuClick(item)}
-                    className="block w-full text-left text-xl text-gray-300 hover:text-accent transition-colors py-3"
+                    className="font-motor tracking-widest block w-full text-left text-xl text-foreground hover:text-accent transition-colors py-3"
                   >
                     {item}
                   </button>
@@ -73,7 +73,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
 
           {/* フッター */}
           <div className="p-6 border-t border-accent/30">
-            <p className="text-sm text-gray-500 text-center">
+            <p className="text-sm text-foreground text-center">
               Bar オープン
             </p>
           </div>

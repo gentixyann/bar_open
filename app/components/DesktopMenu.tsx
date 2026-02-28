@@ -7,7 +7,7 @@ export default function DesktopMenu() {
         <li key={item}>
           <a
             href={`#${item.toLowerCase()}`}
-            className="hover:text-white hover:bg-accent px-4 py-2 rounded transition-all duration-300"
+            className="font-motor tracking-widest text-foreground hover:text-accent transition-colors duration-300 px-4 py-2 rounded border border-transparent hover:border-accent"
           >
             {item}
           </a>

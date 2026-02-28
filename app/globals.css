@@ -1,59 +1,77 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0a0f0d;
-  --foreground: #e8f5e9;
+  --background: #ffffff;
+  --foreground: #111111;
   --accent: #0a714e;
-  --accent-light: #0d9468;
-  --accent-lighter: #10b981;
-  --bg-section: #0d2e23;
+  --accent-yellow: #cca300;
+  --bg-section: #f8f8f8;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-accent: var(--accent);
-  --color-accent-light: var(--accent-light);
-  --color-accent-lighter: var(--accent-lighter);
-  --color-bg-section: var(--bg-section);
-  --font-sans: var(--font-zen-old-mincho);
+  --color-background: #ffffff;
+  --color-foreground: #111111;
+  --color-accent: #0a714e;
+  --color-accent-yellow: #cca300;
+  --color-bg-section: #f8f8f8;
+  --font-sans: var(--font-boku-gothic), sans-serif;
+}
+
+/* フォントユーティリティクラス */
+.font-boku-gothic {
+  font-family: var(--font-boku-gothic), sans-serif;
+}
+
+.font-motor {
+  font-family: var(--font-motor), sans-serif;
 }
 
 /* Tailwindでaccentカラーを使えるようにする */
 .text-accent {
-  color: var(--accent);
+  color: #0a714e;
 }
 
 .bg-accent {
-  background-color: var(--accent);
+  background-color: #0a714e;
 }
 
 .border-accent {
-  border-color: var(--accent);
+  border-color: #0a714e;
 }
 
 .hover\:text-accent:hover {
-  color: var(--accent);
+  color: #0a714e;
 }
 
 .hover\:bg-accent:hover {
-  background-color: var(--accent);
+  background-color: #0a714e;
 }
 
 .bg-accent\/10 {
-  background-color: rgb(from var(--accent) r g b / 0.1);
+  background-color: rgb(10 113 78 / 0.1);
 }
 
 .bg-accent\/20 {
-  background-color: rgb(from var(--accent) r g b / 0.2);
+  background-color: rgb(10 113 78 / 0.2);
+}
+
+.text-accent-yellow {
+  color: #cca300;
+}
+
+.border-accent-yellow {
+  border-color: #cca300;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-zen-old-mincho), serif;
+  background: #ffffff;
+  color: #111111;
+  font-family: var(--font-boku-gothic), sans-serif;
 }
 
-html {
+html,
+body {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100%;
 }

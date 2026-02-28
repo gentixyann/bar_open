@@ -1,46 +1,57 @@
+import Image from "next/image";
+
 export default function AccessSection() {
   return (
-    <section id="access" className="py-24 bg-[var(--bg-section)]/40">
+    <section id="access" className="py-24 bg-white">
       <div className="container mx-auto px-6">
-        <h3 className="text-4xl font-bold text-white text-center mb-12">
+        <h3 className="font-motor text-5xl tracking-widest text-accent text-center mb-12">
           Access
         </h3>
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8">
             {/* 店舗情報 */}
-            <div className="bg-[var(--bg-section)]/60 p-8 rounded-lg shadow-[0_5px_15px_rgba(10,113,78,0.3)] transition-all duration-300">
+            <div className="relative bg-bg-section p-8 rounded-lg border border-accent/15 transition-all duration-300">
+              <Image
+                src="/images/terebitou_01.png"
+                alt=""
+                width={40}
+                height={40}
+                aria-hidden="true"
+                className="absolute object-contain pointer-events-none"
+                style={{ top: "-50px", right: "12px", transform: "rotate(12deg)" }}
+              />
               <div className="space-y-6">
                 <div>
-                  <h4 className="text-xl font-bold text-white mb-2">住所</h4>
-                  <p>北海道札幌市 大通公園すぐそば</p>
-                  <p className="text-sm mt-1">
+                  <h4 className="text-xl font-bold text-foreground mb-2 border-l-4 border-accent pl-3">住所</h4>
+                  <p className="text-foreground">北海道札幌市中央区南１条西１丁目３ 板谷ビル 8階</p>
+                  <p className="text-sm text-foreground mt-1">
                     大通駅はなんかいっぱい出口あってわからない、って人のために。まずは32番出口を探しましょう。
                   </p>
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-white mb-2">
+                  <h4 className="text-xl font-bold text-foreground mb-2 border-l-4 border-accent pl-3">
                     営業時間
                   </h4>
-                  <p>19:00 - 24:00</p>
-                  <p className="text-sm text-gray-400 mt-1">
+                  <p className="text-foreground">19:00 - 24:00</p>
+                  <p className="text-sm text-foreground mt-1">
                     ラストオーダー 23:30
                   </p>
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-white mb-2">定休日</h4>
-                  <p>日曜日・水曜日</p>
+                  <h4 className="text-xl font-bold text-foreground mb-2 border-l-4 border-accent pl-3">定休日</h4>
+                  <p className="text-foreground">日曜日・水曜日</p>
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-white mb-2">
+                  <h4 className="text-xl font-bold text-foreground mb-2 border-l-4 border-accent pl-3">
                     アクセス
                   </h4>
-                  <p>すすきの駅より徒歩圏内</p>
+                  <p className="text-foreground">すすきの駅より徒歩圏内</p>
                 </div>
               </div>
             </div>
 
             {/* Google Map */}
-            <div className="bg-gray-900/50 p-4 rounded-lg hover:shadow-[0_5px_15px_#ffffff20] transition-all duration-300">
+            <div>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2915.769!2d141.3565286!3d43.0597237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b29d3a8ce7877%3A0x2a776b483c994a15!2sBar%20%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3!5e0!3m2!1sja!2sjp!4v1707384000000!5m2!1sja!2sjp"
                 width="100%"
@@ -60,9 +71,9 @@ export default function AccessSection() {
               href="https://maps.app.goo.gl/hoecGKVfWnC58JnW6"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block text-accent hover:text-white transition-colors"
+              className="inline-block text-accent hover:text-foreground transition-colors font-motor tracking-widest"
             >
-              Google Mapsで開く →
+              Google Maps で開く →
             </a>
           </div>
         </div>

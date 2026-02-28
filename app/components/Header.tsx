@@ -21,7 +21,7 @@ export default function Header() {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? "bg-background/95 shadow-lg shadow-accent/10" : "bg-transparent"
+          isScrolled ? "bg-white/95 shadow-sm" : "bg-white/80"
         }`}
       >
         <nav className="container mx-auto px-6 py-4">
@@ -43,7 +43,7 @@ export default function Header() {
             {/* ハンバーガーボタン（モバイルのみ） */}
             <button
               onClick={() => setIsMobileMenuOpen(true)}
-              className="md:hidden text-white p-2"
+              className="md:hidden text-foreground p-2"
               aria-label="メニューを開く"
             >
               <svg

@@ -1,11 +1,20 @@
 import type { Metadata } from "next";
-import { Zen_Old_Mincho } from "next/font/google";
+import localFont from "next/font/local";
+import { Bebas_Neue } from "next/font/google";
 import "./globals.css";
 
-const zenOldMincho = Zen_Old_Mincho({
-  weight: ["400", "700"],
+const bokuGothic = localFont({
+  src: "../public/fonts/Boku2-Bold.otf",
+  variable: "--font-boku-gothic",
+  weight: "400",
+  display: "swap",
+});
+
+const bebasNeue = Bebas_Neue({
+  weight: "400",
   subsets: ["latin"],
-  variable: "--font-zen-old-mincho",
+  variable: "--font-motor",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -40,7 +49,7 @@ export default function RootLayout({
   return (
     <html lang="ja" className="scroll-smooth">
       <body
-        className={`${zenOldMincho.variable} antialiased`}
+        className={`${bokuGothic.variable} ${bebasNeue.variable} antialiased`}
       >
         {children}
       </body>

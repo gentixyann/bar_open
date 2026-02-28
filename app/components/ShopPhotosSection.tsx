@@ -44,9 +44,9 @@ export default function ShopPhotosSection({ photos }: ShopPhotosSectionProps) {
   }, []);
 
   return (
-    <section className="py-12 px-6 bg-[var(--bg-section)]/20">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <section className="py-8 px-6 bg-white">
+      <div className="max-w-2xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {photos.map((photo, index) => (
             <div
               key={photo}
@@ -54,7 +54,7 @@ export default function ShopPhotosSection({ photos }: ShopPhotosSectionProps) {
                 photoRefs.current[index] = el;
               }}
               className={`
-                relative aspect-square overflow-hidden rounded-lg
+                relative aspect-video overflow-hidden rounded-lg
                 transition-all duration-1000 ease-out
                 ${
                   visiblePhotos[index]
