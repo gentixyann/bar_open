@@ -32,7 +32,7 @@ export default function Footer() {
               aria-label="Note"
             >
               <Image
-                src="/images/logos/note/logo.svg"
+                src="/images/logos/note/square.svg"
                 alt="Note"
                 width={24}
                 height={24}
