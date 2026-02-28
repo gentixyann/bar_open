@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="py-24 bg-bg-section">
+    <section id="contact" className="relative z-[5] py-24">
       <div className="container mx-auto px-6">
         <h3 className="font-motor text-5xl tracking-widest text-accent text-center mb-12">
           Contact

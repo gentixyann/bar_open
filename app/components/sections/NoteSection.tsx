@@ -1,72 +1,11 @@
 import Image from "next/image";
-
-interface NoteItem {
-  title: string;
-  link: string;
-  pubDate: string;
-  thumbnail?: string;
-}
-
-async function fetchNoteArticles(): Promise<NoteItem[]> {
-  try {
-    const res = await fetch("https://note.com/baropen_sapporo/rss", {
-      next: { revalidate: 3600 },
-    });
-    if (!res.ok) return [];
-    const xml = await res.text();
-
-    const items: NoteItem[] = [];
-    const itemMatches = xml.matchAll(/<item>([\s\S]*?)<\/item>/g);
-
-    for (const match of itemMatches) {
-      const item = match[1];
-
-      const title =
-        item.match(/<title><!\[CDATA\[([\s\S]*?)\]\]><\/title>/)?.[1] ??
-        item.match(/<title>([\s\S]*?)<\/title>/)?.[1] ??
-        "";
-
-      const link =
-        item.match(/<link>([\s\S]*?)<\/link>/)?.[1] ??
-        item.match(/<guid>([\s\S]*?)<\/guid>/)?.[1] ??
-        "";
-
-      const pubDate =
-        item.match(/<pubDate>([\s\S]*?)<\/pubDate>/)?.[1] ?? "";
-
-      // サムネイル: media:thumbnail のテキスト内容 → enclosure の url 属性 → description 内 img の順に探す
-      const thumbnail =
-        item.match(/<media:thumbnail>([\s\S]*?)<\/media:thumbnail>/)?.[1]?.trim() ??
-        item.match(/<enclosure[^>]+url="([^"]+)"/)?.[1] ??
-        item.match(/<img[^>]+src="([^"]+)"/)?.[1];
-
-      items.push({
-        title: title.trim(),
-        link: link.trim(),
-        pubDate: pubDate.trim(),
-        thumbnail,
-      });
-
-      if (items.length >= 3) break;
-    }
-
-    return items;
-  } catch {
-    return [];
-  }
-}
-
-function formatDate(pubDate: string): string {
-  const d = new Date(pubDate);
-  if (isNaN(d.getTime())) return pubDate;
-  return d.toLocaleDateString("ja-JP", { year: "numeric", month: "long", day: "numeric" });
-}
+import { fetchNoteArticles, formatDate } from "../../utils/rssParser";
 
 export default async function NoteSection() {
   const articles = await fetchNoteArticles();
 
   return (
-    <section id="news" className="py-24 bg-white">
+    <section id="news" className="relative z-[5] py-24">
       <div className="container mx-auto px-6">
         <h3 className="font-motor text-5xl tracking-widest text-accent text-center mb-12">
           News

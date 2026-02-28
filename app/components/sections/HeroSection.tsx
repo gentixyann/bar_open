@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { COLORS } from "../../config/colors";
 
 export default function HeroSection() {
   return (
@@ -33,7 +34,7 @@ export default function HeroSection() {
         {/* 中央テキスト（回転しない） */}
         <span
           className="relative text-3xl tracking-widest"
-          style={{ color: "#eeead7" }}
+          style={{ color: COLORS.heroCream }}
         >
           オープン
         </span>

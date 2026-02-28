@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function AccessSection() {
   return (
-    <section id="access" className="py-24 bg-white">
+    <section id="access" className="relative z-[5] py-24">
       <div className="container mx-auto px-6">
         <h3 className="font-motor text-5xl tracking-widest text-accent text-center mb-12">
           Access

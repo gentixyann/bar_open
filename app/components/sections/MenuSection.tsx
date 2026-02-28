@@ -1,6 +1,6 @@
 export default function MenuSection() {
   return (
-    <section id="menu" className="py-24 bg-bg-section">
+    <section id="menu" className="relative z-[5] py-24">
       <div className="container mx-auto px-6">
         <h3 className="font-motor text-5xl tracking-widest text-accent text-center mb-12">
           Menu
