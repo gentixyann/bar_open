@@ -12,7 +12,7 @@ export interface NoteItem {
 export async function fetchNoteArticles(limit = 3): Promise<NoteItem[]> {
   try {
     const res = await fetch("https://note.com/baropen_sapporo/rss", {
-      next: { revalidate: 3600 },
+      next: { revalidate: 1200 },
     });
     if (!res.ok) return [];
     const xml = await res.text();
