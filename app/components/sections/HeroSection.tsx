@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { COLORS } from "../../config/colors";
-
 const BAR_TEXT = "BAR";
 const SAPPORO_TEXT = "SAPPORO";
 
@@ -13,10 +12,10 @@ export default function HeroSection() {
 
   useEffect(() => {
     const barTimers = BAR_TEXT.split("").map((_, i) =>
-      setTimeout(() => setBarChars(i + 1), 300 + i * 150)
+      setTimeout(() => setBarChars(i + 1), 800 + i * 250)
     );
     const sapporoTimers = SAPPORO_TEXT.split("").map((_, i) =>
-      setTimeout(() => setSapporoChars(i + 1), 950 + i * 120)
+      setTimeout(() => setSapporoChars(i + 1), 1800 + i * 200)
     );
     return () => [...barTimers, ...sapporoTimers].forEach(clearTimeout);
   }, []);
