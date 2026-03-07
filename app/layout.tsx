@@ -24,8 +24,8 @@ const bebasNeue = Bebas_Neue({
 });
 
 export const metadata: Metadata = {
-  title: "Bar オープン - 札幌 | 解放×開放",
-  description: "札幌・大通公園すぐそばのBar オープン。解放×開放をテーマに、おしゃれな空間とカジュアルな雰囲気で初心者から常連まで楽しめるバーです。営業時間19:00-24:00、飲み放題3,000円。日曜・水曜定休。",
+  title: "Bar オープン - 札幌",
+  description: "札幌・大通公園すぐ近くのBar オープン。解放×開放をテーマに、おしゃれな空間とカジュアルな雰囲気で初心者から常連まで楽しめるバーです。",
   keywords: ["Bar オープン", "バー", "札幌", "大通公園", "飲み放題", "カジュアル", "おしゃれ"],
   authors: [{ name: "Bar オープン" }],
   openGraph: {
