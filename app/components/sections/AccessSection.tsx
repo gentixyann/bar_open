@@ -71,9 +71,9 @@ export default function AccessSection() {
               href="https://maps.app.goo.gl/hoecGKVfWnC58JnW6"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block text-accent hover:text-foreground transition-colors font-motor tracking-widest"
+              className="inline-flex items-center gap-1 text-accent hover:text-foreground transition-colors"
             >
-              Google Maps で開く →
+              <span>GoogleMapsで開く</span>
             </a>
           </div>
         </div>

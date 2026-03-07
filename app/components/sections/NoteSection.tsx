@@ -47,9 +47,9 @@ export default async function NoteSection() {
               href="https://note.com/baropen_sapporo"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block font-motor tracking-widest text-accent hover:text-foreground transition-colors"
+              className="inline-flex items-center gap-1 text-accent hover:text-foreground transition-colors"
             >
-              note をもっと見る →
+              <span>noteをもっと見る</span>
             </a>
           </div>
         </div>
