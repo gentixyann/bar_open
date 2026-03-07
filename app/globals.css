@@ -15,6 +15,7 @@
   --color-accent-yellow: #cca300;
   --color-bg-section: #f8f8f8;
   --font-sans: var(--font-boku-gothic), sans-serif;
+  --font-nove: var(--font-nove);
 }
 
 /* フォントユーティリティクラス */
@@ -24,6 +25,10 @@
 
 .font-motor {
   font-family: var(--font-motor), sans-serif;
+}
+
+.font-nove {
+  font-family: var(--font-nove), sans-serif;
 }
 
 /* Tailwindでaccentカラーを使えるようにする */

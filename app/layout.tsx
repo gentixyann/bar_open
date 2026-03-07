@@ -10,6 +10,12 @@ const bokuGothic = localFont({
   display: "swap",
 });
 
+const noveFont = localFont({
+  src: "../public/fonts/nove.ttf",
+  variable: "--font-nove",
+  display: "swap",
+});
+
 const bebasNeue = Bebas_Neue({
   weight: "400",
   subsets: ["latin"],
@@ -49,7 +55,7 @@ export default function RootLayout({
   return (
     <html lang="ja" className="scroll-smooth">
       <body
-        className={`${bokuGothic.variable} ${bebasNeue.variable} antialiased`}
+        className={`${bokuGothic.variable} ${bebasNeue.variable} ${noveFont.variable} antialiased`}
       >
         {children}
       </body>
