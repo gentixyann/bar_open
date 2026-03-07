@@ -39,7 +39,7 @@ export default function AccessSection() {
                 </div>
                 <div>
                   <h4 className="text-xl font-bold text-foreground mb-2 border-l-4 border-accent pl-3">定休日</h4>
-                  <p className="text-foreground">日曜日・水曜日</p>
+                  <p className="text-foreground">月曜日・火曜日</p>
                 </div>
                 <div>
                   <h4 className="text-xl font-bold text-foreground mb-2 border-l-4 border-accent pl-3">

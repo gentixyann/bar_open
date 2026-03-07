@@ -29,29 +29,20 @@ export default function MenuSection() {
             {/* 単品メニュー */}
             <div className="pb-8 border-b border-accent/20">
               <h4 className="text-2xl font-bold text-foreground mb-6">単品メニュー</h4>
-              <div className="space-y-6 text-left max-w-sm mx-auto">
-                {/* ハイボール */}
-                <div>
-                  <h5 className="text-base font-bold text-foreground mb-2 border-b border-accent/20 pb-1">ハイボール</h5>
-                  <div className="space-y-1">
-                    <div className="flex justify-between text-foreground">
-                      <span>山崎ハイボール</span>
-                      <span>700円</span>
-                    </div>
-                    <div className="flex justify-between text-foreground">
-                      <span>Dewarsハイボール</span>
-                      <span>700円</span>
-                    </div>
+              <div className="space-y-2 text-left max-w-sm mx-auto">
+                {[
+                  { name: "ビール", price: "700円~" },
+                  { name: "ハイボール", price: "720円~" },
+                  { name: "カクテル", price: "720円~" },
+                  { name: "ウイスキー", price: "720円~" },
+                  { name: "日本酒", price: "700円~" },
+                  { name: "ソフトドリンク・紅茶など", price: "各種あり" },
+                ].map(({ name, price }) => (
+                  <div key={name} className="flex justify-between text-foreground border-b border-accent/10 pb-2">
+                    <span className="font-bold">{name}</span>
+                    <span>{price}</span>
                   </div>
-                </div>
-                {/* ビール */}
-                <div>
-                  <h5 className="text-base font-bold text-foreground mb-2 border-b border-accent/20 pb-1">ビール</h5>
-                  <div className="flex justify-between text-foreground">
-                    <span>サッポロクラシック</span>
-                    <span>700円</span>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
 
