@@ -33,10 +33,10 @@ export default function HeroSection() {
         />
         {/* 中央テキスト（回転しない） */}
         <span
-          className="relative text-3xl tracking-widest"
+          className="relative text-3xl tracking-widest text-center leading-snug"
           style={{ color: COLORS.heroCream }}
         >
-          オープン
+          Bar<br />オープン
         </span>
       </div>
     </section>
