@@ -6,7 +6,7 @@
  */
 export const COLORS = {
   // ブランドカラー（globals.css の --accent, --accent-yellow に対応）
-  accent: "#0a714e",
+  accent: "#4c9e36",
   accentYellow: "#cca300",
 
   // ベースカラー（globals.css の --background, --foreground に対応）

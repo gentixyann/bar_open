@@ -3,7 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #111111;
-  --accent: #0a714e;
+  --accent: #4c9e36;
   --accent-yellow: #cca300;
   --bg-section: #f8f8f8;
 }
@@ -11,7 +11,7 @@
 @theme inline {
   --color-background: #ffffff;
   --color-foreground: #111111;
-  --color-accent: #0a714e;
+  --color-accent: #4c9e36;
   --color-accent-yellow: #cca300;
   --color-bg-section: #f8f8f8;
   --font-sans: var(--font-boku-gothic), sans-serif;
@@ -33,31 +33,31 @@
 
 /* Tailwindでaccentカラーを使えるようにする */
 .text-accent {
-  color: #0a714e;
+  color: #4c9e36;
 }
 
 .bg-accent {
-  background-color: #0a714e;
+  background-color: #4c9e36;
 }
 
 .border-accent {
-  border-color: #0a714e;
+  border-color: #4c9e36;
 }
 
 .hover\:text-accent:hover {
-  color: #0a714e;
+  color: #4c9e36;
 }
 
 .hover\:bg-accent:hover {
-  background-color: #0a714e;
+  background-color: #4c9e36;
 }
 
 .bg-accent\/10 {
-  background-color: rgb(10 113 78 / 0.1);
+  background-color: rgb(76 158 54 / 0.1);
 }
 
 .bg-accent\/20 {
-  background-color: rgb(10 113 78 / 0.2);
+  background-color: rgb(76 158 54 / 0.2);
 }
 
 .text-accent-yellow {

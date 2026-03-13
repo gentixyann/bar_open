@@ -38,7 +38,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-black/30" />
 
       {/* ロゴ＋BAR・SAPPOROテキスト */}
-      <div className="relative z-10 flex items-center justify-center" style={{ width: 520, height: 420 }}>
+      <div className="relative z-10 flex items-center justify-center" style={{ width: 520, height: 520 }}>
         {/* BAR テキスト: 左上 */}
         <div
           className="font-nove absolute top-5 left-10 leading-none select-none"
@@ -53,23 +53,26 @@ export default function HeroSection() {
           {BAR_TEXT.slice(0, barChars)}
         </div>
 
-        {/* 中央ロゴ（回転アニメーション）＋テキスト */}
-        <div className="flex items-center justify-center" style={{ width: 300, height: 300 }}>
+        {/* 中央ロゴ（回転アニメーション）＋下部ロゴ */}
+        <div className="flex flex-col items-center justify-center gap-0">
+          <div className="flex items-center justify-center" style={{ width: 300, height: 300 }}>
+            <Image
+              src="/images/open_logo.png"
+              alt="Bar オープン"
+              width={300}
+              height={300}
+              priority
+              className="animate-spin"
+              style={{ animationDuration: "12s", animationTimingFunction: "linear", width: 300, height: 300 }}
+            />
+          </div>
           <Image
-            src="/images/open_logo_top.png"
-            alt="Bar オープン"
-            width={300}
-            height={300}
+            src="/images/open_logo_title.png"
+            alt="オープン"
+            width={200}
+            height={100}
             priority
-            className="animate-spin absolute"
-            style={{ animationDuration: "12s", animationTimingFunction: "linear", width: 300, height: 300 }}
           />
-          <span
-            className="relative text-3xl tracking-widest text-center leading-snug"
-            style={{ color: COLORS.heroCream }}
-          >
-            オープン
-          </span>
         </div>
 
         {/* SAPPORO テキスト: 右下 */}

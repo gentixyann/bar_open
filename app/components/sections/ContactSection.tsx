@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="relative z-[5] py-24">
+    <section id="contact" className="relative z-[5] pt-24 pb-8">
       <div className="container mx-auto px-6">
         <h3 className="font-motor text-5xl tracking-widest text-accent text-center mb-12">
           Contact
@@ -35,6 +35,14 @@ export default function ContactSection() {
                   お気軽にDMでお問い合わせください
                 </p>
                 <p className="text-sm text-foreground">初めての方も大歓迎です</p>
+                <div className="mt-6 flex justify-center">
+                  <Image
+                    src="/images/テキストロゴ緑.png"
+                    alt="Bar Open"
+                    width={200}
+                    height={80}
+                  />
+                </div>
               </div>
             </div>
           </div>
