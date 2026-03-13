@@ -31,7 +31,7 @@ export default function ShopPhotosSection({ photos }: ShopPhotosSectionProps) {
             }
           });
         },
-        { threshold: 0.1 }
+        { threshold: 0.3 }
       );
 
       observer.observe(ref);
@@ -55,11 +55,11 @@ export default function ShopPhotosSection({ photos }: ShopPhotosSectionProps) {
               }}
               className={`
                 relative aspect-video overflow-hidden rounded-lg
-                transition-all duration-1000 ease-out
+                transition-all duration-[1600ms] ease-in-out
                 ${
                   visiblePhotos[index]
                     ? 'opacity-100 translate-y-0'
-                    : 'opacity-0 translate-y-8'
+                    : 'opacity-0 translate-y-4'
                 }
               `}
             >
