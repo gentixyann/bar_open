@@ -28,7 +28,7 @@ export default function HeroSection() {
       {/* 背景画像 */}
       <Image
         src="/images/top_image.jpg"
-        alt="Bar オープン 店内"
+        alt="バー・オープン 店内"
         fill
         priority
         className="object-cover"
@@ -58,7 +58,7 @@ export default function HeroSection() {
           <div className="flex items-center justify-center" style={{ width: 300, height: 300 }}>
             <Image
               src="/images/open_logo.png"
-              alt="Bar オープン"
+              alt="バー・オープン"
               width={300}
               height={300}
               priority

@@ -29,7 +29,7 @@ export default function Header() {
             <div className="flex items-center">
               <Image
                 src="/images/open_logo.png"
-                alt="Bar オープン"
+                alt="バー・オープン"
                 width={50}
                 height={50}
                 priority

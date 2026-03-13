@@ -74,7 +74,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           {/* フッター */}
           <div className="p-6 border-t border-accent/30">
             <p className="text-sm text-foreground text-center">
-              Bar オープン
+              バー・オープン
             </p>
           </div>
         </div>

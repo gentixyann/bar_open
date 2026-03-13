@@ -60,7 +60,7 @@ export default function AccessSection() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Bar オープン 地図"
+                title="バー・オープン 地図"
               ></iframe>
             </div>
           </div>

@@ -24,21 +24,21 @@ const bebasNeue = Bebas_Neue({
 });
 
 export const metadata: Metadata = {
-  title: "Bar オープン - 札幌",
-  description: "札幌・大通公園すぐ近くのBar オープン。解放×開放をテーマに、おしゃれな空間とカジュアルな雰囲気で初心者から常連まで楽しめるバーです。",
-  keywords: ["Bar オープン", "バー", "札幌", "大通公園", "飲み放題", "カジュアル", "おしゃれ"],
-  authors: [{ name: "Bar オープン" }],
+  title: "バー・オープン - 札幌",
+  description: "札幌・大通公園すぐ近くのバー・オープン。解放×開放をテーマに、おしゃれな空間とカジュアルな雰囲気で初心者から常連まで楽しめるバーです。",
+  keywords: ["バー・オープン", "バー", "札幌", "大通公園", "飲み放題", "カジュアル", "おしゃれ"],
+  authors: [{ name: "バー・オープン" }],
   openGraph: {
-    title: "Bar オープン - 札幌",
+    title: "バー・オープン - 札幌",
     description: "解放×開放をテーマに、おしゃれ×カジュアルな雰囲気で楽しめるバーです。",
     url: "https://bar-open.pages.dev",
-    siteName: "Bar オープン",
+    siteName: "バー・オープン",
     locale: "ja_JP",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bar オープン - 札幌",
+    title: "バー・オープン - 札幌",
     description: "解放×開放をテーマに、おしゃれ×カジュアルな雰囲気で楽しめるバーです。",
   },
   robots: {

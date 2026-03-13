@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container mx-auto px-6">
         <div className="text-center">
           <p className="text-sm text-foreground">
-            © 2026 Bar オープン. All rights reserved.
+            © 2026 バー・オープン. All rights reserved.
           </p>
           <p className="text-xs mt-2 text-foreground">北海道札幌市中央区南１条西１丁目３ 板谷ビル 8階</p>
           <div className="mt-4 flex justify-center items-center gap-6">
