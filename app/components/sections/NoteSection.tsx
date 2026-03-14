@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { fetchNoteArticles, formatDate } from "../../utils/rssParser";
+import FadeIn from "../animations/FadeIn";
 
 export default async function NoteSection() {
   const articles = await fetchNoteArticles();
@@ -10,6 +11,7 @@ export default async function NoteSection() {
         <h3 className="font-motor text-5xl tracking-widest text-accent text-center mb-12">
           News
         </h3>
+        <FadeIn>
         <div className="max-w-4xl mx-auto">
           {articles.length === 0 ? (
             <p className="text-center text-foreground">記事を取得できませんでした。</p>
@@ -53,6 +55,7 @@ export default async function NoteSection() {
             </a>
           </div>
         </div>
+        </FadeIn>
       </div>
     </section>
   );

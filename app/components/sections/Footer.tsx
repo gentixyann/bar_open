@@ -1,9 +1,11 @@
 import Image from "next/image";
+import FadeIn from "../animations/FadeIn";
 
 export default function Footer() {
   return (
     <footer className="relative z-[5] border-t border-accent/20 py-8">
       <div className="container mx-auto px-6">
+        <FadeIn>
         <div className="text-center">
           <p className="text-sm text-foreground">
             © 2026 バー・オープン. All rights reserved.
@@ -40,6 +42,7 @@ export default function Footer() {
             </a>
           </div>
         </div>
+        </FadeIn>
       </div>
     </footer>
   );

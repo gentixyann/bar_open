@@ -1,4 +1,5 @@
 import Image from "next/image";
+import FadeIn from "../animations/FadeIn";
 
 export default function AccessSection() {
   return (
@@ -7,6 +8,7 @@ export default function AccessSection() {
         <h3 className="font-motor text-5xl tracking-widest text-accent text-center mb-12">
           Access
         </h3>
+        <FadeIn>
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8">
             {/* 店舗情報 */}
@@ -77,6 +79,7 @@ export default function AccessSection() {
             </a>
           </div>
         </div>
+        </FadeIn>
       </div>
     </section>
   );

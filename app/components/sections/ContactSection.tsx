@@ -1,4 +1,5 @@
 import Image from "next/image";
+import FadeIn from "../animations/FadeIn";
 
 export default function ContactSection() {
   return (
@@ -7,6 +8,7 @@ export default function ContactSection() {
         <h3 className="font-motor text-5xl tracking-widest text-accent text-center mb-12">
           Contact
         </h3>
+        <FadeIn>
         <div className="max-w-2xl mx-auto">
           <div>
             <p className="text-center mb-6 text-foreground">
@@ -47,6 +49,7 @@ export default function ContactSection() {
             </div>
           </div>
         </div>
+        </FadeIn>
       </div>
     </section>
   );
