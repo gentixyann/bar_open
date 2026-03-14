@@ -32,8 +32,7 @@ export default function MenuSection() {
   }, []);
 
   const fadeClass = (key: string) =>
-    `transition-all duration-[1600ms] ease-in-out ${
-      visible[key] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+    `transition-all duration-[1600ms] ease-in-out ${visible[key] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
     }`;
 
   return (
@@ -75,13 +74,13 @@ export default function MenuSection() {
               className={`pb-8 border-b border-accent/20 ${fadeClass('items')}`}
             >
               <h4 className="text-2xl font-bold text-foreground mb-6">単品メニュー</h4>
-              <div className="space-y-2 text-left max-w-sm mx-auto">
+              <div className="space-y-2 text-left max-w-xs mx-auto">
                 {[
                   { name: "ビール", price: "700円~" },
                   { name: "ハイボール", price: "720円~" },
                   { name: "カクテル", price: "720円~" },
                   { name: "ウイスキー", price: "720円~" },
-                  { name: "日本酒", price: "700円~" },
+                  { name: "焼酎各種", price: "750円~" },
                   { name: "ソフトドリンク・紅茶など", price: "各種あり" },
                 ].map(({ name, price }) => (
                   <div key={name} className="flex justify-between text-foreground border-b border-accent/10 pb-2">
