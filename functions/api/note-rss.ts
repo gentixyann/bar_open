@@ -44,7 +44,7 @@ export async function onRequest(): Promise<Response> {
         item.match(/<description>([\s\S]*?)<\/description>/)?.[1] ??
         null;
       const description = rawDescription
-        ? rawDescription.replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim()
+        ? rawDescription.replace(/<[^>]+>/g, "").replace(/\s+/g, " ").replace(/続きをみる$/, "").replace(/続きを見る$/, "").trim()
         : null;
 
       items.push({
