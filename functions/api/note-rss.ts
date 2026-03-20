@@ -3,6 +3,7 @@ interface NoteItem {
   link: string;
   pubDate: string;
   thumbnail: string | null;
+  description: string | null;
 }
 
 export async function onRequest(): Promise<Response> {
@@ -38,11 +39,20 @@ export async function onRequest(): Promise<Response> {
         item.match(/<img[^>]+src="([^"]+)"/)?.[1] ??
         null;
 
+      const rawDescription =
+        item.match(/<description><!\[CDATA\[([\s\S]*?)\]\]><\/description>/)?.[1] ??
+        item.match(/<description>([\s\S]*?)<\/description>/)?.[1] ??
+        null;
+      const description = rawDescription
+        ? rawDescription.replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim()
+        : null;
+
       items.push({
         title: title.trim(),
         link: link.trim(),
         pubDate: pubDate.trim(),
         thumbnail,
+        description,
       });
 
       if (items.length >= 3) break;

@@ -55,6 +55,11 @@ export default function NoteSection() {
                   <div className="flex flex-col gap-1">
                     <p className="text-xs text-foreground/60">{formatDate(article.pubDate)}</p>
                     <p className="text-foreground font-bold leading-snug">{article.title}</p>
+                    {article.description && (
+                      <p className="text-sm text-foreground/60 leading-relaxed line-clamp-2">
+                        {article.description}
+                      </p>
+                    )}
                   </div>
                 </a>
               ))}
