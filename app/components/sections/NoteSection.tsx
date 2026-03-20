@@ -1,9 +1,23 @@
+"use client";
+
 import Image from "next/image";
-import { fetchNoteArticles, formatDate } from "../../utils/rssParser";
+import { useEffect, useState } from "react";
+import { type NoteItem, formatDate } from "../../utils/rssParser";
 import FadeIn from "../animations/FadeIn";
 
-export default async function NoteSection() {
-  const articles = await fetchNoteArticles();
+export default function NoteSection() {
+  const [articles, setArticles] = useState<NoteItem[]>([]);
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    fetch("/api/note-rss")
+      .then((r) => r.json())
+      .then((data) => {
+        setArticles(data);
+        setLoaded(true);
+      })
+      .catch(() => setLoaded(true));
+  }, []);
 
   return (
     <section id="news" className="relative z-[5] py-24">
@@ -13,7 +27,9 @@ export default async function NoteSection() {
         </h3>
         <FadeIn>
         <div className="max-w-4xl mx-auto">
-          {articles.length === 0 ? (
+          {!loaded ? (
+            <p className="text-center text-foreground/40">読み込み中...</p>
+          ) : articles.length === 0 ? (
             <p className="text-center text-foreground">記事を取得できませんでした。</p>
           ) : (
             <div className="space-y-6">
