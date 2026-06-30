@@ -76,10 +76,10 @@ export default function MenuSection() {
               <h4 className="text-2xl font-bold text-foreground mb-6">単品メニュー</h4>
               <div className="space-y-2 text-left max-w-xs mx-auto">
                 {[
-                  { name: "ビール", price: "700円~" },
+                  { name: "ビール", price: "770円~" },
                   { name: "ハイボール", price: "720円~" },
-                  { name: "カクテル", price: "720円~" },
-                  { name: "ウイスキー", price: "720円~" },
+                  { name: "カクテル", price: "750円~" },
+                  { name: "テキーラ（ショット）", price: "600円~" },
                   { name: "焼酎各種", price: "750円~" },
                   { name: "ソフトドリンク・紅茶など", price: "各種あり" },
                 ].map(({ name, price }) => (
