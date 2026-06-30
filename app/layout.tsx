@@ -24,6 +24,7 @@ const bebasNeue = Bebas_Neue({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://bar-open.pages.dev"),
   title: "バー・オープン - 札幌",
   description: "札幌・大通公園すぐ近くのバー・オープン。解放×開放をテーマに、おしゃれな空間とカジュアルな雰囲気で初心者から常連まで楽しめるバーです。",
   keywords: ["バー・オープン", "バー", "札幌", "大通公園", "飲み放題", "カジュアル", "おしゃれ"],
@@ -47,6 +48,51 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://bar-open.pages.dev/#website",
+      url: "https://bar-open.pages.dev",
+      name: "バー・オープン",
+      inLanguage: "ja",
+      publisher: { "@id": "https://bar-open.pages.dev/#business" },
+    },
+    {
+      "@type": "BarOrPub",
+      "@id": "https://bar-open.pages.dev/#business",
+      name: "バー・オープン",
+      description:
+        "札幌・大通公園すぐ近くのバー・オープン。解放×開放をテーマに、おしゃれな空間とカジュアルな雰囲気で初心者から常連まで楽しめるバーです。",
+      url: "https://bar-open.pages.dev",
+      image: "https://bar-open.pages.dev/icon.png",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "南１条西１丁目３ 板谷ビル 8階",
+        addressLocality: "札幌市中央区",
+        addressRegion: "北海道",
+        addressCountry: "JP",
+      },
+      servesCuisine: "Bar",
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: [
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday",
+          ],
+          opens: "19:00",
+          closes: "24:00",
+        },
+      ],
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -57,6 +103,10 @@ export default function RootLayout({
       <body
         className={`${bokuGothic.variable} ${bebasNeue.variable} ${noveFont.variable} antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
       </body>
     </html>
